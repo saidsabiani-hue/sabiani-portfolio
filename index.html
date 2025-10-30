@@ -1,78 +1,157 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Said Sabiani – Portfolio</title>
-<style>
-    body {font-family: Arial, sans-serif; margin:0; padding:0; background:#f4f4f4; color:#333;}
-    header {background:#0078d7; color:white; padding:20px; position:sticky; top:0; z-index:100;}
-    header h1 {margin:0;}
-    nav {margin-top:10px;}
-    nav a {color:white; text-decoration:none; margin:0 10px; font-weight:bold;}
-    nav a:hover {text-decoration:underline;}
-    section {padding:60px 20px; max-width:900px; margin:auto; background:white; margin-bottom:20px; border-radius:8px; box-shadow:0 0 10px rgba(0,0,0,0.1);}
-    h2 {color:#0078d7;}
-    ul.skills {list-style:none; padding:0;}
-    ul.skills li {display:inline-block; background:#e1e1e1; margin:5px; padding:5px 10px; border-radius:5px;}
-    footer {text-align:center; padding:20px; background:#ddd; margin-top:20px;}
-    a.button {display:inline-block; background:#0078d7; color:white; padding:10px 15px; margin:5px 0; border-radius:5px; text-decoration:none;}
-    a.button:hover {background:#005fa3;}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Said Sabiani – Portfolio</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 70px;
+        }
+
+        header {
+            background-color: #0078d7;
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+            header h1 {
+                font-size: 3rem;
+                margin-bottom: 10px;
+            }
+
+        section {
+            padding: 60px 15px;
+        }
+
+        .skill-badge {
+            margin: 5px;
+        }
+
+        footer {
+            background-color: #f8f9fa;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .project-card {
+            transition: transform 0.2s;
+        }
+
+            .project-card:hover {
+                transform: scale(1.03);
+            }
+    </style>
 </head>
 <body>
 
-<header>
-    <h1>Said Sabiani</h1>
-    <p>.NET & Fullstack Entwickler | Angular, C#</p>
-    <nav>
-        <a href="#about">Über mich</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projekte</a>
-        <a href="#contact">Kontakt</a>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Said Sabiani</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">Über mich</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projekte</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Kontakt</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
-</header>
 
-<section id="about">
-    <h2>Über mich</h2>
-    <p>Ich bin ein erfahrener Softwareentwickler mit über 15 Jahren Erfahrung in .NET, Angular und modernen Webtechnologien. Ich betreue komplette Anwendungen, entwickle neue Features und sorge dafür, dass alles stabil läuft. Besonders interessant finde ich die Kombination aus Backend-Architektur und modernen Frontend-Technologien.</p>
-</section>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>Said Sabiani</h1>
+            <p class="lead">Senior .NET & Fullstack Entwickler | Angular | C# | Webentwicklung</p>
+        </div>
+    </header>
 
-<section id="skills">
-    <h2>Skills</h2>
-    <ul class="skills">
-        <li>.NET / C#</li>
-        <li>Angular</li>
-        <li>HTML / CSS / JavaScript</li>
-        <li>SQL / Datenbanken</li>
-        <li>Azure / Cloud</li>
-        <li>REST APIs</li>
-        <li>jQuery / Bootstrap</li>
-        <li>Fullstack Entwicklung</li>
-    </ul>
-</section>
+    <!-- Über mich -->
+    <section id="about" class="bg-light">
+        <div class="container">
+            <h2>Über mich</h2>
+            <p>Ich bin ein erfahrener Softwareentwickler mit über 15 Jahren Erfahrung in der Entwicklung von Web- und Unternehmensanwendungen. Ich betreue komplette Anwendungen von der Konzeption bis zur Wartung, entwickle neue Features und optimiere bestehende Systeme. Mein Fokus liegt auf stabilen, skalierbaren Lösungen und einer sauberen Codebasis.</p>
+            <p>Besonders interessant finde ich die Kombination aus Backend-Architektur, modernen Frontend-Technologien und Cloud-Lösungen. Ich arbeite gerne in Teams, übernehme Verantwortung für Projekte und bringe innovative Ideen ein.</p>
+        </div>
+    </section>
 
-<section id="projects">
-    <h2>Projekte</h2>
-    <ul>
-        <li><strong>Interne Bankanwendung:</strong> Betreuung und Weiterentwicklung kompletter Fullstack-Anwendung</li>
-        <li><strong>Modernisierung .NET MVC Apps:</strong> Refactoring, Performance-Optimierung und neue Features</li>
-        <li><strong>Eigenes Effizienz-Tool:</strong> Automatisierung von wiederkehrenden Aufgaben zur Zeitersparnis im Team</li>
-    </ul>
-    <p>Weitere Projekte auf <a href="https://github.com/username" target="_blank">GitHub</a></p>
-</section>
+    <!-- Skills -->
+    <section id="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="d-flex flex-wrap">
+                <span class="badge bg-primary skill-badge">.NET / C#</span>
+                <span class="badge bg-primary skill-badge">ASP.NET MVC</span>
+                <span class="badge bg-primary skill-badge">Angular</span>
+                <span class="badge bg-primary skill-badge">HTML / CSS / JavaScript</span>
+                <span class="badge bg-primary skill-badge">SQL / Datenbanken</span>
+                <span class="badge bg-primary skill-badge">REST APIs</span>
+                <span class="badge bg-primary skill-badge">Azure / Cloud</span>
+                <span class="badge bg-primary skill-badge">jQuery / Bootstrap</span>
+                <span class="badge bg-primary skill-badge">Fullstack Entwicklung</span>
+            </div>
+        </div>
+    </section>
 
-<section id="contact">
-    <h2>Kontakt</h2>
-    <p>Email: <a href="mailto:said@sabiani.dev">said@sabiani.dev</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/said-sabiani" target="_blank">linkedin.com/in/said-sabiani</a></p>
-    <p>Xing: <a href="https://www.xing.com/profile/Said_Sabiani" target="_blank">xing.com/profile/Said_Sabiani</a></p>
-    <a href="mailto:said@sabiani.dev" class="button">Email senden</a>
-</section>
+    <!-- Projekte -->
+    <section id="projects" class="bg-light">
+        <div class="container">
+            <h2>Projekte</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card project-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Interne Bankanwendung</h5>
+                            <p class="card-text">Fullstack Betreuung und Weiterentwicklung einer komplexen Bankanwendung. Verantwortung für Backend, Frontend und Datenintegration.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card project-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Modernisierung .NET MVC Apps</h5>
+                            <p class="card-text">Refactoring, Performance-Optimierung und Integration neuer Features. Zusammenarbeit mit internationalen Teams.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card project-card">
+                        <div class="card-body">
+                            <h5 class="card-title">Eigenes Effizienz-Tool</h5>
+                            <p class="card-text">Entwicklung eines Tools zur Automatisierung von wiederkehrenden Aufgaben im Team, Steigerung der Effizienz um 30%.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="mt-3">Weitere Projekte auf <a href="https://github.com/username" target="_blank">GitHub</a></p>
+        </div>
+    </section>
 
-<footer>
-    &copy; 2025 Said Sabiani
-</footer>
+    <!-- Kontakt -->
+    <section id="contact">
+        <div class="container">
+            <h2>Kontakt</h2>
+            <p>Email: <a href="mailto:said@sabiani.dev">said@sabiani.dev</a></p>
+            <p>LinkedIn: <a href="https://linkedin.com/in/said-sabiani" target="_blank">linkedin.com/in/said-sabiani</a></p>
+            <p>Xing: <a href="https://www.xing.com/profile/Said_Sabiani" target="_blank">xing.com/profile/Said_Sabiani</a></p>
+            <a href="mailto:said@sabiani.dev" class="btn btn-primary mt-2">Email senden</a>
+        </div>
+    </section>
 
+    <!-- Footer -->
+    <footer>
+        &copy; 2025 Said Sabiani
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
