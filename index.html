@@ -1,99 +1,78 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Said Sabiani – .NET Entwickler</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f5f5f5;
-            color: #333;
-        }
-        header {
-            background-color: #0078d7;
-            color: white;
-            padding: 20px 40px;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-        }
-        main {
-            padding: 40px;
-            max-width: 800px;
-            margin: auto;
-        }
-        section {
-            margin-bottom: 30px;
-        }
-        h2 {
-            color: #0078d7;
-        }
-        ul.skills {
-            list-style: none;
-            padding: 0;
-        }
-        ul.skills li {
-            display: inline-block;
-            background-color: #e1e1e1;
-            margin: 5px;
-            padding: 5px 10px;
-            border-radius: 5px;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #ddd;
-            margin-top: 40px;
-        }
-        a {
-            color: #0078d7;
-            text-decoration: none;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Said Sabiani – Portfolio</title>
+<style>
+    body {font-family: Arial, sans-serif; margin:0; padding:0; background:#f4f4f4; color:#333;}
+    header {background:#0078d7; color:white; padding:20px; position:sticky; top:0; z-index:100;}
+    header h1 {margin:0;}
+    nav {margin-top:10px;}
+    nav a {color:white; text-decoration:none; margin:0 10px; font-weight:bold;}
+    nav a:hover {text-decoration:underline;}
+    section {padding:60px 20px; max-width:900px; margin:auto; background:white; margin-bottom:20px; border-radius:8px; box-shadow:0 0 10px rgba(0,0,0,0.1);}
+    h2 {color:#0078d7;}
+    ul.skills {list-style:none; padding:0;}
+    ul.skills li {display:inline-block; background:#e1e1e1; margin:5px; padding:5px 10px; border-radius:5px;}
+    footer {text-align:center; padding:20px; background:#ddd; margin-top:20px;}
+    a.button {display:inline-block; background:#0078d7; color:white; padding:10px 15px; margin:5px 0; border-radius:5px; text-decoration:none;}
+    a.button:hover {background:#005fa3;}
+</style>
 </head>
 <body>
-    <header>
-        <h1>Said Sabiani</h1>
-        <p>.NET Entwickler | Fullstack Entwickler | Angular & C#</p>
-    </header>
-    <main>
-        <section>
-            <h2>Über mich</h2>
-            <p>Erfahrener Softwareentwickler mit über 15 Jahren Erfahrung in .NET, Angular und modernen Webtechnologien. Spezialisiert auf die Betreuung und Weiterentwicklung kompletter Anwendungen.</p>
-        </section>
 
-        <section>
-            <h2>Skills</h2>
-            <ul class="skills">
-                <li>.NET</li>
-                <li>Angular</li>
-                <li>HTML/CSS/JS</li>
-                <li>SQL</li>
-                <li>Azure</li>
-                <li>REST APIs</li>
-            </ul>
-        </section>
+<header>
+    <h1>Said Sabiani</h1>
+    <p>.NET & Fullstack Entwickler | Angular, C#</p>
+    <nav>
+        <a href="#about">Über mich</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projekte</a>
+        <a href="#contact">Kontakt</a>
+    </nav>
+</header>
 
-        <section>
-            <h2>Projekte</h2>
-            <ul>
-                <li>Interne Bankanwendung – Fullstack Betreuung</li>
-                <li>Modernisierung bestehender .NET MVC Anwendungen</li>
-                <li>Eigenes Tool zur Effizienzsteigerung im Entwicklungsprozess</li>
-            </ul>
-        </section>
+<section id="about">
+    <h2>Über mich</h2>
+    <p>Ich bin ein erfahrener Softwareentwickler mit über 15 Jahren Erfahrung in .NET, Angular und modernen Webtechnologien. Ich betreue komplette Anwendungen, entwickle neue Features und sorge dafür, dass alles stabil läuft. Besonders interessant finde ich die Kombination aus Backend-Architektur und modernen Frontend-Technologien.</p>
+</section>
 
-        <section>
-            <h2>Kontakt</h2>
-            <p>Email: <a href="mailto:said@sabiani.dev">said@sabiani.dev</a></p>
-        </section>
-    </main>
-    <footer>
-        &copy; 2025 Said Sabiani
-    </footer>
+<section id="skills">
+    <h2>Skills</h2>
+    <ul class="skills">
+        <li>.NET / C#</li>
+        <li>Angular</li>
+        <li>HTML / CSS / JavaScript</li>
+        <li>SQL / Datenbanken</li>
+        <li>Azure / Cloud</li>
+        <li>REST APIs</li>
+        <li>jQuery / Bootstrap</li>
+        <li>Fullstack Entwicklung</li>
+    </ul>
+</section>
+
+<section id="projects">
+    <h2>Projekte</h2>
+    <ul>
+        <li><strong>Interne Bankanwendung:</strong> Betreuung und Weiterentwicklung kompletter Fullstack-Anwendung</li>
+        <li><strong>Modernisierung .NET MVC Apps:</strong> Refactoring, Performance-Optimierung und neue Features</li>
+        <li><strong>Eigenes Effizienz-Tool:</strong> Automatisierung von wiederkehrenden Aufgaben zur Zeitersparnis im Team</li>
+    </ul>
+    <p>Weitere Projekte auf <a href="https://github.com/username" target="_blank">GitHub</a></p>
+</section>
+
+<section id="contact">
+    <h2>Kontakt</h2>
+    <p>Email: <a href="mailto:said@sabiani.dev">said@sabiani.dev</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/said-sabiani" target="_blank">linkedin.com/in/said-sabiani</a></p>
+    <p>Xing: <a href="https://www.xing.com/profile/Said_Sabiani" target="_blank">xing.com/profile/Said_Sabiani</a></p>
+    <a href="mailto:said@sabiani.dev" class="button">Email senden</a>
+</section>
+
+<footer>
+    &copy; 2025 Said Sabiani
+</footer>
+
 </body>
 </html>
