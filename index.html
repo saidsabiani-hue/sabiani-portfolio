@@ -1,78 +1,251 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Said Sabiani – Portfolio</title>
-<style>
-    body {font-family: Arial, sans-serif; margin:0; padding:0; background:#f4f4f4; color:#333;}
-    header {background:#0078d7; color:white; padding:20px; position:sticky; top:0; z-index:100;}
-    header h1 {margin:0;}
-    nav {margin-top:10px;}
-    nav a {color:white; text-decoration:none; margin:0 10px; font-weight:bold;}
-    nav a:hover {text-decoration:underline;}
-    section {padding:60px 20px; max-width:900px; margin:auto; background:white; margin-bottom:20px; border-radius:8px; box-shadow:0 0 10px rgba(0,0,0,0.1);}
-    h2 {color:#0078d7;}
-    ul.skills {list-style:none; padding:0;}
-    ul.skills li {display:inline-block; background:#e1e1e1; margin:5px; padding:5px 10px; border-radius:5px;}
-    footer {text-align:center; padding:20px; background:#ddd; margin-top:20px;}
-    a.button {display:inline-block; background:#0078d7; color:white; padding:10px 15px; margin:5px 0; border-radius:5px; text-decoration:none;}
-    a.button:hover {background:#005fa3;}
-</style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Said Sabiani – Senior Fullstack .NET Entwickler</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: "Segoe UI", Roboto, sans-serif;
+            background-color: #f9fafb;
+            color: #333;
+            padding-top: 70px;
+        }
+
+        header {
+            background: linear-gradient(90deg, #3b5998, #627da4);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            margin-top: -20px;
+        }
+
+            header img {
+                height: 150px;
+                border-radius: 50%;
+                margin-bottom: 20px;
+                border: 4px solid white;
+            }
+
+        h2 {
+            margin-bottom: 25px;
+            color: #3b5998;
+            font-weight: 600;
+        }
+
+        .skill-badge {
+            margin: 5px;
+            font-size: 0.95rem;
+        }
+
+        .timeline {
+            border-left: 3px solid #3b5998;
+            padding-left: 20px;
+            margin-left: 10px;
+        }
+
+        .timeline-item {
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: #ddd;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        .project-card {
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+            .project-card:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            }
+    </style>
 </head>
 <body>
 
-<header>
-    <h1>Said Sabiani</h1>
-    <p>.NET & Fullstack Entwickler | Angular, C#</p>
-    <nav>
-        <a href="#about">Über mich</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projekte</a>
-        <a href="#contact">Kontakt</a>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">Said Sabiani</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">Über mich</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Erfahrung</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projekte</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Kontakt</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
-</header>
 
-<section id="about">
-    <h2>Über mich</h2>
-    <p>Ich bin ein erfahrener Softwareentwickler mit über 15 Jahren Erfahrung in .NET, Angular und modernen Webtechnologien. Ich betreue komplette Anwendungen, entwickle neue Features und sorge dafür, dass alles stabil läuft. Besonders interessant finde ich die Kombination aus Backend-Architektur und modernen Frontend-Technologien.</p>
-</section>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <img src="https://sabiani.dev/Bild2.jpg" alt="Profilbild">
+            <h1 class="fw-bold">Said Sabiani</h1>
+            <p class="lead">Senior .NET & Fullstack Entwickler | Angular | C# | SQL | Azure</p>
+        </div>
+    </header>
 
-<section id="skills">
-    <h2>Skills</h2>
-    <ul class="skills">
-        <li>.NET / C#</li>
-        <li>Angular</li>
-        <li>HTML / CSS / JavaScript</li>
-        <li>SQL / Datenbanken</li>
-        <li>Azure / Cloud</li>
-        <li>REST APIs</li>
-        <li>jQuery / Bootstrap</li>
-        <li>Fullstack Entwicklung</li>
-    </ul>
-</section>
+    <!-- Über mich -->
+    <section id="about" class="bg-light py-5">
+        <div class="container">
+            <h2>Über mich</h2>
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <p>Ich bin Diplom-Informatiker (FH) mit über 15 Jahren Erfahrung in der Entwicklung von Web- und Unternehmensanwendungen. Seit 2017 arbeite ich bei der Commerzbank als .NET-Entwickler und betreue komplexe Anwendungen im Finanzumfeld – von der Konzeption über die Implementierung bis zur Wartung.</p>
+                    <p>Ich lege großen Wert auf sauberen, wartbaren Code, automatisierte Prozesse und eine gute Zusammenarbeit im Team. Besonders spannend finde ich die Kombination von Backend-Architektur, modernen Frontend-Frameworks und Cloud-Technologien.</p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <i class="bi bi-laptop fs-1 text-primary"></i>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section id="projects">
-    <h2>Projekte</h2>
-    <ul>
-        <li><strong>Interne Bankanwendung:</strong> Betreuung und Weiterentwicklung kompletter Fullstack-Anwendung</li>
-        <li><strong>Modernisierung .NET MVC Apps:</strong> Refactoring, Performance-Optimierung und neue Features</li>
-        <li><strong>Eigenes Effizienz-Tool:</strong> Automatisierung von wiederkehrenden Aufgaben zur Zeitersparnis im Team</li>
-    </ul>
-    <p>Weitere Projekte auf <a href="https://github.com/username" target="_blank">GitHub</a></p>
-</section>
+    <!-- Berufserfahrung -->
+    <section id="experience" class="py-5">
+        <div class="container">
+            <h2 class="mb-4">Berufserfahrung & Ausbildung</h2>
+            <div class="timeline">
 
-<section id="contact">
-    <h2>Kontakt</h2>
-    <p>Email: <a href="mailto:said@sabiani.dev">said@sabiani.dev</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/said-sabiani" target="_blank">linkedin.com/in/said-sabiani</a></p>
-    <p>Xing: <a href="https://www.xing.com/profile/Said_Sabiani" target="_blank">xing.com/profile/Said_Sabiani</a></p>
-    <a href="mailto:said@sabiani.dev" class="button">Email senden</a>
-</section>
+                <div class="timeline-item">
+                    <h5>Seit 2017 – Commerzbank AG</h5>
+                    <p>
+                        <strong>.NET / Angular Entwickler</strong><br>
+                        Weiterentwicklung und Wartung geschäftskritischer Bankanwendungen.
+                        Fokus auf Datenintegration, UI-Modernisierung und Prozessautomatisierung.
+                        Entwicklung interner Tools zur Effizienzsteigerung und Qualitätsverbesserung.
+                    </p>
+                </div>
 
-<footer>
-    &copy; 2025 Said Sabiani
-</footer>
+                <div class="timeline-item">
+                    <h5>2017 – GFT Technologies (Externer Entwickler bei der Commerzbank)</h5>
+                    <p>
+                        <strong>Fullstack-Entwicklung mit ASP.NET, MVC, SQL Server, jQuery & Bootstrap</strong><br>
+                        Umsetzung von Digitalisierungsprojekten zur Automatisierung manueller Geschäftsprozesse
+                        und Verbesserung interner Workflows.
+                    </p>
+                </div>
 
+                <div class="timeline-item">
+                    <h5>2010 – 2016 – Quipu GmbH</h5>
+                    <p>
+                        <strong>Fullstack-Entwickler (.NET, C#, SQL Server, Windows Forms)</strong><br>
+                        Entwicklung und Optimierung international eingesetzter Zahlungsverkehrs-
+                        und Kontoverwaltungssysteme für Banken. Enge Zusammenarbeit mit
+                        Fachbereichen zur Anforderungsanalyse und Umsetzung neuer Features.
+                    </p>
+                </div>
+
+                <div class="timeline-item">
+                    <h5>2003 – 2008 – Fachhochschule Frankfurt</h5>
+                    <p>
+                        <strong>Diplom-Informatiker (FH)</strong><br>
+                        Schwerpunkt: Softwareentwicklung und Datenbanken.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Skills -->
+    <section id="skills" class="bg-light py-5">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="mb-2 fw-semibold">💻 Backend</div>
+            <span class="badge bg-primary skill-badge">.NET / C#</span>
+            <span class="badge bg-primary skill-badge">ASP.NET MVC / Core</span>
+            <span class="badge bg-primary skill-badge">Entity Framework</span>
+            <span class="badge bg-primary skill-badge">REST APIs</span>
+            <span class="badge bg-primary skill-badge">SQL Server / T-SQL</span>
+
+            <div class="mt-3 fw-semibold">🌐 Frontend</div>
+            <span class="badge bg-success skill-badge">Angular</span>
+            <span class="badge bg-success skill-badge">TypeScript</span>
+            <span class="badge bg-success skill-badge">Bootstrap</span>
+            <span class="badge bg-success skill-badge">jQuery</span>
+            <span class="badge bg-success skill-badge">HTML / CSS / JavaScript</span>
+
+            <div class="mt-3 fw-semibold">☁️ Tools & Cloud</div>
+            <span class="badge bg-info text-dark skill-badge">Azure</span>
+            <span class="badge bg-info text-dark skill-badge">TFS / Git / BitBucket</span>
+            <span class="badge bg-info text-dark skill-badge">Visual Studio</span>
+            <span class="badge bg-info text-dark skill-badge">SSRS</span>
+
+            <div class="mt-3 fw-semibold">🏦 Fachliche Kenntnisse</div>
+            <span class="badge bg-warning text-dark skill-badge">Zahlungsverkehr</span>
+            <span class="badge bg-warning text-dark skill-badge">Kreditwesen</span>
+            <span class="badge bg-warning text-dark skill-badge">Finanzmathematik</span>
+            <span class="badge bg-warning text-dark skill-badge">EBICS / SEPA</span>
+        </div>
+    </section>
+
+    <!-- Projekte -->
+    <section id="projects" class="py-5">
+        <div class="container">
+            <h2>Projekte</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="card project-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Bankinterne Anwendung</h5>
+                            <p class="card-text">Fullstack-Entwicklung einer Anwendung zur Steuerung und Überwachung von Zahlungsprozessen inkl. Performance-Optimierung.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card project-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Modernisierung von .NET MVC Apps</h5>
+                            <p class="card-text">Migration älterer Anwendungen auf moderne .NET Core-Strukturen und Angular-Frontends. Verbesserung von Stabilität und Sicherheit.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card project-card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Eigenes Effizienz-Tool</h5>
+                            <p class="card-text">Automatisierung wiederkehrender Aufgaben im Entwickleralltag, Reduktion der manuellen Arbeit um 30 %.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontakt -->
+    <section id="contact" class="bg-light py-5">
+        <div class="container text-center">
+            <h2>Kontakt</h2>
+            <p><i class="bi bi-envelope"></i> <a href="mailto:said.sabiani@gmail.com">said.sabiani@gmail.com</a></p>
+            <p><i class="bi bi-linkedin"></i> <a href="https://linkedin.com/in/said-sabiani-313145397" target="_blank">LinkedIn</a></p>
+            <p><i class="bi bi-x-circle"></i> <a href="https://www.xing.com/profile/Said_Sabiani" target="_blank">Xing</a></p>
+            <a href="mailto:said.sabiani@gmail.com" class="btn btn-primary mt-3">Kontakt aufnehmen</a>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2025 Said Sabiani – Alle Rechte vorbehalten
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
