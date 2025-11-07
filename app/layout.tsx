@@ -18,10 +18,6 @@ const geistMono = Geist_Mono({
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 
-    // Bootstrap JS einmalig laden
-      useEffect(() => {
-          import("bootstrap/dist/js/bootstrap.bundle.min.js") as Promise<any>;
-      }, []);
 
   return (
     <html lang="de">
